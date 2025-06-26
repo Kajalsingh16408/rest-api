@@ -5,6 +5,8 @@ const facultyRoute =require('./api/routes/faculty')
 const mongoose=require('mongoose');
 const userRoute =require('./api/routes/user')
 const fileUpload = require('express-fileupload');
+const serverless = require('serverless-http');
+
 
 mongoose.connect('mongodb://localhost:27017/kajal');
 
@@ -49,4 +51,7 @@ app.use((req,res,next)=>{
     })
 })
 
+// module.exports = app;
 module.exports = app;
+module.exports.handler = serverless(app);
+

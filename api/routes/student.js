@@ -12,7 +12,7 @@ cloudinary.config({
 });
 
 // Fetch all students (with auth)
-router.get('/', checkAuth, (req, res) => {
+router.get('/', (req, res) => {
     Student.find()
         .then(result => {
             res.status(200).json({ studentData: result });
