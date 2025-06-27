@@ -6,7 +6,9 @@ const studentSchema = new mongoose.Schema({
     gender:String,
     course:String,
     city:String,
-    age:Number
+    age:Number,
+    imagePath: String
+
 })
 
 module.exports = mongoose.model('Student',studentSchema);

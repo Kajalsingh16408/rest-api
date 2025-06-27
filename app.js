@@ -7,8 +7,9 @@ const userRoute =require('./api/routes/user')
 const fileUpload = require('express-fileupload');
 const serverless = require('serverless-http');
 
+mongoose.connect('mongodb+srv://kajalsingh16408:vHet1umcZVhoUToS@cluster0.qbigb18.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
-mongoose.connect('mongodb://localhost:27017/kajal');
+
 
 mongoose.connection.on('error',err=>{
     console.log('connction failed');
