@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const studentRoute =require('./api/routes/student')
@@ -7,7 +8,8 @@ const userRoute =require('./api/routes/user')
 const fileUpload = require('express-fileupload');
 const serverless = require('serverless-http');
 
-mongoose.connect('mongodb+srv://kajalsingh16408:vHet1umcZVhoUToS@cluster0.qbigb18.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect(process.env.MONGO_URI);
+
 
 
 
